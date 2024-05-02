@@ -1,0 +1,76 @@
+---
+title: "What MATH4753JASON24 does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What MATH4753JASON24 does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>", fig.width = 6, fig.height = 6
+)
+```
+
+```{r setup}
+library(MATH4753JASON24)
+```
+
+# Introduction 
+
+This R package is a collection of functions that was collected over the course of MATH 4753 or Applied Statistical Methods. Through this, it will demonstrate how each function works and what will be the result from each of them. 
+
+## myncurve
+
+This function accepts 3 values, mu, sigma, and an a value (or x if you want it to read it that way) which is a data set.
+
+The output will be a list of the values that are inputted into the function, the data set, and a plot showing the area of the data set (through a normal distribution). 
+
+As a result we get this:
+
+```{r}
+MATH4753JASON24::myncurve(mu=0,sigma=5,fire)
+```
+
+## getmode()
+
+This function basically accepts a vector of values (preferably numerical) and from there gets the most occurring value from the vector. 
+
+Here is a demonstration of it in action:
+
+```{r}
+list <- c(2,2,3,4,5,6,7,9)
+mode <- MATH4753JASON24::getmode(list)
+mode
+```
+
+## mycltp
+
+This function can accept many values but it mainly accepts 3 which is the sample size (n), the iterations (iter), and the lambda value (which is default to 10). This function plots a central limit theorem for the poisson distribution. It will show 3 plots one being a histogram with the sample mean, the other being a barplot of y, and the last one being a probability of poisson. 
+
+Here is an example of a central limit theorem with a poisson:
+
+```{r}
+MATH4753JASON24::mycltp(n=30,iter=10000,lambda=10)
+```
+
+
+## myplot and myquad
+
+This function was the very first function made in the project and its a simple function that basically will give a result using a quadratic equation with the function only accepting a x value (numerical value). myquad is a similar concept to the myplot one except this time it's with different constants.  
+
+Here is an example as to how it works:
+
+```{r}
+x = 5
+MATH4753JASON24::myplot(x)
+
+MATH4753JASON24::myquad(x)
+```
+
+
+## 
+
+

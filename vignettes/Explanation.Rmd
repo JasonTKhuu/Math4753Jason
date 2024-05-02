@@ -71,6 +71,12 @@ MATH4753JASON24::myquad(x)
 ```
 
 
-## 
+## maxlikg2
+
+This function accepts two theta values and with it, lfun reads a type of function that the user wants to plot with it defaulting to logbinpois. This function specifically assumes that the user wants the maximum likelihood from a poisson distribution which then this plot outputs a maximum likelihood of the poisson distribution. 
+
+Here is an example: 
+
+
 
 

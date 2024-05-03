@@ -1,6 +1,6 @@
 #' FIREDAM data set for fire damage and distance from fire station.
 #'
-#' 15 lines of measurements of the cost of fire damage (in thousands of dollars) and the distance of the fire to the fire station (in miles)
+#' 15 lines of measurements of the cost of fire damage (in thousands of dollars) and the distance of the fire to the fire station (in miles).
 #'
 #' @format A data set with 15 rows (all within a sample of 15 recent fires from a suburb city) and 2 variables:
 #' \describe{

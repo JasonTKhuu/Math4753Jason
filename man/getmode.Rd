@@ -10,7 +10,7 @@ getmode(v)
 \item{v}{gets the vector}
 }
 \value{
-the most occurance of a numeric value
+the most occurrence of a numeric value
 }
 \description{
 Mode

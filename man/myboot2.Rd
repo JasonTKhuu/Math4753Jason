@@ -2,26 +2,26 @@
 % Please edit documentation in R/Bootstrap.R
 \name{myboot2}
 \alias{myboot2}
-\title{BootStrap}
+\title{Bootstrap}
 \usage{
 myboot2(iter = 10000, x, fun = "mean", alpha = 0.05, cx = 1.5, ...)
 }
 \arguments{
-\item{iter}{iterates a number of times given (or 10000 by default)}
+\item{iter}{this value is basically the amount of times the sample will loop}
 
-\item{x}{gets the sample (random)}
+\item{x}{a vector of the data set}
 
-\item{fun}{determines which function to use with mean being default}
+\item{fun}{the function used for the bootstrap (example mean, median, etc)}
 
-\item{alpha}{determines the confidence interval with 0.05 being default (95% confidence)}
+\item{alpha}{the alpha value is used to help determine quantile}
 
-\item{cx}{determines position in terms of x (1.5 by default)}
+\item{cx}{the cx value is basically the controlled x value}
 
-\item{...}{anything else can be added to this such as xlab and more}
+\item{...}{this can accept any values with things such as xlab}
 }
 \value{
-a histogram of the bootstrap samples given
+this will return a bootstrap histogram of the values given through the function
 }
 \description{
-BootStrap
+Bootstrap
 }

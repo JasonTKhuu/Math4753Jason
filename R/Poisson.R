@@ -8,8 +8,11 @@
 #' @return A plot of what the Poisson likelihood will look like given the theta's and function
 #' @export
 #'
+#' @importFrom graphics axis contour
+#'
 #' @examples
 maxlikg2=function(theta1,theta2,lfun="logbinpois",...){
+
   n1=length(theta1)
   n2=length(theta2)
   z=outer(theta1,theta2,lfun)

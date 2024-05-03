@@ -77,6 +77,40 @@ This function accepts two theta values and with it, lfun reads a type of functio
 
 Here is an example: 
 
+```{r}
+logbinpois=function(theta1,theta2) log(dbinom(5,size=15,prob=theta1)) + log(dpois(6,lambda=theta2))
+MATH4753JASON24::maxlikg2(theta1=seq(0,1,length=1000),theta2=seq(0,10,length=1000),lfun=logbinpois) # gets the sequence between 0 and 1 through 1000 values and theta2 goes from 0 10 with the same length
+# One thing to note is that this is the coolest function ever
+```
 
+## ntickets
 
+This function solves a problem about the issue on overbooking for flights. This function basically looks for the most optimal tickets to be sold in order to avoid overbooking. This function accepts a N amount of seats in the plane and it accepts a gamma value in which there will be an overbooking and p is the chance of the passenger showing up. This will plot two graphs, one discrete and one continuous and it will give a point at a number in which it is the most optimal to sell those tickets to avoid overbooking. 
+
+Here is an example of it in action:
+
+```{r}
+MATH4753JASON24::ntickets(N=200,gamma=0.03,0.90)
+```
+## mysample
+This function a n amount of samples, a iter value (iterations), the a time value in which it would plot. Currently it is defualted at n = 1000, iter = 10, and the time being equal to 0.5. The output of this function will be a animation or basically a time of how the plot is created over time (based on the n, iter, and time values). 
+
+For example: 
+
+```{r}
+# Default
+result <- MATH4753JASON24::mysample()
+
+# With custom numbers
+result <- MATH4753JASON24::mysample(n=100,iter=5,time=0.2)
+```
+
+## myboot2
+
+This function reads in a iter value, x value, fun value, alpha value, cx value, and any other values used for the function (...). What this program does is that it reads in the iter value, x value (random set), and from there it determines what type of function (fun) will be displayed for the histogram. The alpha value gives the quantiles and from there anything can be changed such as the x and y label (to describe the plot). The plot will also display the values of the confidence interval, the type of function used, and the x value. 
+
+```{r}
+# Lets say I want to use the fire csv file and specifically the distance and I want to know the mean through bootstrap: 
+MATH4753JASON24::myboot2(x=fire$DISTANCE,xlab="mean")
+```
 
